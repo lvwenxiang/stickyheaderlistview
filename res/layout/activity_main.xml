@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stickyheaderlsitview.MainActivity" >
+    tools:context="com.example.activity.MainActivity" >
     <com.example.stickyheaderlsitview.SmoothListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -74,7 +74,9 @@
             android:id="@+id/fv_top_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:text="粘贴处"
+                android:background="#E0E0E0"
             android:visibility="invisible"/>
     </LinearLayout>
 </FrameLayout>
