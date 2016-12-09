@@ -15,8 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import com.example.view.HeaderFilterView;
-
 public class SmoothListView extends ListView implements OnScrollListener {
 	private float mLastY = -1; // save event y
 	private Scroller mScroller; // used for scroll back
