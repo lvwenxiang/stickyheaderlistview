@@ -1,4 +1,4 @@
-package com.example.mode;
+package com.example.bean;
 
 public class TravelingEntity {
 	private String type; // 风景、动物、植物、建筑

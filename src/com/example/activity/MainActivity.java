@@ -15,13 +15,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.adapter.TravelingAdapter;
-import com.example.mode.OperationEntity;
-import com.example.mode.TravelingEntity;
+import com.example.bean.OperationEntity;
+import com.example.bean.TravelingEntity;
+import com.example.mode.ModelUtil;
 import com.example.stickyheaderlsitview.R;
 import com.example.stickyheaderlsitview.SmoothListView;
 import com.example.util.ColorUtil;
 import com.example.util.DensityUtil;
-import com.example.util.ModelUtil;
 import com.example.view.HeaderAdViewView;
 import com.example.view.HeaderFilterView;
 import com.example.view.HeaderOperationView;

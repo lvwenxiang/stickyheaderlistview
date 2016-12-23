@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_rect_radius3"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="300dip"
+        android:layout_height="65dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="提示"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="300dip"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:lineSpacingExtra="2dip"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="关于"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="10dip" >
+
+        <Button
+            android:id="@+id/btn_dialog_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="55dip"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/rect_radius3_selector"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_dialog_confirm"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="55dip"
+            android:background="@drawable/rect_radius3_selector"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="确定"
+            android:textColor="#34b634"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

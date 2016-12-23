@@ -10,6 +10,7 @@
     <color name="transparent">#00000000</color>
     <color name="half_transparent">#8f000000</color>
     <color name="orange">#f27242</color>
+    <color name="gray_num3">#c7c7c7</color>
 
     <!-- background -->
     <color name="bg">#FFF5F5F5</color>

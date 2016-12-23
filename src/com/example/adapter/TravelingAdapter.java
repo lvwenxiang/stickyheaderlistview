@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.mode.TravelingEntity;
+import com.example.bean.TravelingEntity;
 import com.example.stickyheaderlsitview.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
