@@ -21,7 +21,7 @@ import com.example.stickyheaderlsitview.R;
  * @author wenxiang.lv
  * 
  */
-public class ContactActivity extends Activity {
+public class ContactActivity extends BaseActivity {
 	Context context;
 	private TextView show;
 
@@ -32,8 +32,8 @@ public class ContactActivity extends Activity {
 		setContentView(R.layout.activity_contact);
 		show = (TextView) findViewById(R.id.show_letter);
 		context = this;
-		a(context);
-    
+		show.setText(a(context).toArray().toString());
+   
 		//b(context);
 		//c(context);
 		

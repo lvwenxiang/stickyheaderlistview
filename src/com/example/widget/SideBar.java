@@ -22,6 +22,7 @@ import com.example.stickyheaderlsitview.R;
 import com.example.tools.ISuspensionInterface;
 import com.example.util.DensityUtil;
 
+//通讯录A  B C
 public class SideBar extends View {
 	// 触摸事件
 	private OnTouchingLetterChangedListener onTouchingLetterChangedListener;

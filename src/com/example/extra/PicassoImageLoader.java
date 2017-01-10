@@ -21,25 +21,27 @@ public class PicassoImageLoader {
 	private Context context;
 	private ImageView imageview;
 	
-	
+	public static void loadImageFromUrl2(Context context, String url,
+			ImageView imageview) {
+
+		Picasso.with(context).load(url).placeholder(R.drawable.btn_white)
+				.error(R.drawable.btn_white).noFade() // 没有淡入的效果
+				.into(target);
+	}
 	private static Target target = new Target(){
 
 		@Override
 		public void onBitmapFailed(Drawable arg0) {
-			// TODO Auto-generated method stub
-			
 		}
 
 		@Override
 		public void onBitmapLoaded(Bitmap arg0, LoadedFrom arg1) {
 			//可以拿到位图
-			
 		}
 
 		@Override
 		public void onPrepareLoad(Drawable arg0) {
-			// TODO Auto-generated method stub
-			
+			// TODO Auto-generated method stub			
 		}
 		 
 	 };
@@ -73,14 +75,10 @@ public class PicassoImageLoader {
 	    }
 
 	
-	public static void loadImageFromUrl2(Context context,String url,ImageView imageview) {
+
 	
-	Picasso.with(context)
-	.load(url)
-	.placeholder(R.drawable.btn_white).error(R.drawable.btn_white)
-	.noFade() //没有淡入的效果
-	.into(target);
-	}
+	
+	
 	public static void loadImageFromUrl(Context context,String url,ImageView imageview) {
 		Picasso.with(context)
 		.load(url)

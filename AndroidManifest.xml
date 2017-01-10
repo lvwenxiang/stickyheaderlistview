@@ -4,36 +4,42 @@
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="21"/>
     <application android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" android:theme="@android:style/Theme.Light.NoTitleBar">
+        android:label="@string/app_name" >
         <activity android:label="@string/app_name" android:name="com.example.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.example.activity.BaseActivity"  />
         <activity android:name="com.example.activity.MoreActivity"/>
+<!--         仿微信通讯库 -->
         <activity android:name="com.example.activity.AddressActivity"/>
         <!--created by ADT ext plugin at 2016-12-07 11:55:11-->
         <activity android:name="com.example.activity.ContactActivity"/>
+        <activity android:name="com.example.activity.FontgradientcolorActivity"/>
+        <!--c仿饿了么搜索 2017-01-04 09:18:19-->
+        <activity android:name="com.example.activity.EleSearchActivity"/>
+        <activity android:name="com.example.activity.EleActivity"/>
+        <!--         头像返回头像 -->
+         <activity android:name="com.example.activity.ClipHeadportraitActivity"  />
+<!--         裁剪头像返回头像 -->
+           <activity android:name="com.example.activity.ShowClipHeadActivity"/>
+        
     </application>
-    
-    
-   <!--  短信相关权限 --> 
-<!--  发送消息-->
-<uses-permission android:name="android.permission.SEND_SMS"/>
-<!--  阅读消息-->
-<uses-permission android:name="android.permission.READ_SMS"/>
-<!--  写入消息-->
-<uses-permission android:name="android.permission.WRITE_SMS" />
-<!-- 接收消息 -->
-<uses-permission android:name="android.permission.RECEIVE_SMS" />
-    
-    <!-- 读取联系人权限 -->   
-<uses-permission android:name="android.permission.READ_CONTACTS"/>  
-<!-- 拨打电话权限 -->  
-<uses-permission android:name="android.permission.CALL_PHONE"/>  
-    
-    
+    <!--  短信相关权限 -->
+    <!--  发送消息-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!--  阅读消息-->
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <!--  写入消息-->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <!-- 接收消息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>

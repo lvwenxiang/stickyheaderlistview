@@ -27,7 +27,7 @@ import com.example.util.PinyinComparator;
 import com.example.widget.SideBar;
 import com.example.widget.SideBar.OnTouchingLetterChangedListener;
 
-public class AddressActivity extends Activity {
+public class AddressActivity extends BaseActivity {
 	RecyclerView mRv;
 	AddressAdapter mAdapter;
 	private List<ContactPersonbean> mDatas = new ArrayList<ContactPersonbean>();;

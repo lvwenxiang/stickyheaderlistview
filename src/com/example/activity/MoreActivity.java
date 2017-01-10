@@ -16,12 +16,15 @@ import android.widget.TextView;
 
 import com.example.stickyheaderlsitview.R;
 
-public class MoreActivity extends Activity{
+public class MoreActivity extends BaseActivity{
 
 	
     private static final DemoInfo[] DEMOS = {
     	new DemoInfo(R.string.moreactivity_listname1, R.string.moreactivity_listname1desc, AddressActivity.class),
-    	new DemoInfo(R.string.moreactivity_listname2, R.string.moreactivity_listname2desc, ContactActivity.class)};
+    	new DemoInfo(R.string.moreactivity_listname2, R.string.moreactivity_listname2desc, ContactActivity.class),
+    	new DemoInfo(R.string.moreactivity_listname3, R.string.moreactivity_listname3desc, FontgradientcolorActivity.class),
+    	new DemoInfo(R.string.moreactivity_listname4, R.string.moreactivity_listname4desc, EleActivity.class),
+    	new DemoInfo(R.string.moreactivity_listname5, R.string.moreactivity_listname5desc, ClipHeadportraitActivity.class)};
 	
 	
 	@Override

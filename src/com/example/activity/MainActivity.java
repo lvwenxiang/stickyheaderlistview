@@ -31,7 +31,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
-public class MainActivity extends Activity implements
+public class MainActivity extends BaseActivity implements
 		SmoothListView.ISmoothListViewListener ,OnClickListener{
 	private List<TravelingEntity> travelingList = new ArrayList<TravelingEntity>(); // ListView数据
 	private boolean isStickyTop = false; // 是否吸附在顶部

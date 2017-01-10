@@ -13,10 +13,13 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
+import com.example.extra.MyLog;
 import com.example.stickyheaderlsitview.R;
 
+//今日头像 viewpage滑动时 字体颜色渐变
 public class ColorTrackView extends View {
 
+	//类似今日头条 滑动 文字变颜色
 	private int mTextStartX;
 	private int mTextStartY;
 
@@ -86,8 +89,18 @@ public class ColorTrackView extends View {
 		int height = measureHeight(heightMeasureSpec);
 		setMeasuredDimension(width, height);
 
+		
+
 		mTextStartX = getMeasuredWidth() / 2 - mTextWidth / 2;
 		mTextStartY = getMeasuredHeight() / 2 - mTextHeight / 2;
+		MyLog.i("TAG", "getMeasuredWidth========"+getMeasuredWidth());
+		MyLog.i("TAG", "getMeasuredHeight========"+getMeasuredHeight());
+		MyLog.i("TAG", "width========"+width);
+		MyLog.i("TAG", "height========"+height);	
+		MyLog.i("TAG", "mTextWidth========"+mTextWidth);
+		MyLog.i("TAG", "mTextHeight========"+mTextHeight);
+		MyLog.i("TAG", "mTextStartX========"+mTextStartX);
+		MyLog.i("TAG", "mTextStartY========"+mTextStartY);	
 	}
 
 	private int measureHeight(int measureSpec) {
@@ -198,6 +211,7 @@ public class ColorTrackView extends View {
 	}
 
 	private void drawChangeLeft(Canvas canvas, int r) {
+		MyLog.i("TAG", "mTextStartX===draw====="+mTextStartX);
 		drawText_h(canvas, mTextChangeColor, mTextStartX,
 				(int) (mTextStartX + mProgress * mTextWidth));
 	}
