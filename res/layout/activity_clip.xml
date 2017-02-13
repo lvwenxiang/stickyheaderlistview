@@ -17,4 +17,11 @@
 <!--         android:scaleType="fitCenter" -->
 <!--         android:src="@drawable/ba" /> -->
 
+<Button 
+     android:id="@+id/btn"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/actionbar_clip_icon"
+    android:layout_alignParentBottom="true"
+    />
 </RelativeLayout>

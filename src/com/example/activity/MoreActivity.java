@@ -24,8 +24,9 @@ public class MoreActivity extends BaseActivity{
     	new DemoInfo(R.string.moreactivity_listname2, R.string.moreactivity_listname2desc, ContactActivity.class),
     	new DemoInfo(R.string.moreactivity_listname3, R.string.moreactivity_listname3desc, FontgradientcolorActivity.class),
     	new DemoInfo(R.string.moreactivity_listname4, R.string.moreactivity_listname4desc, EleActivity.class),
-    	new DemoInfo(R.string.moreactivity_listname5, R.string.moreactivity_listname5desc, ClipHeadportraitActivity.class)};
-	
+    	new DemoInfo(R.string.moreactivity_listname5, R.string.moreactivity_listname5desc, ClipHeadportraitActivity.class),
+    	new DemoInfo(R.string.moreactivity_listname6, R.string.moreactivity_listname6desc, LightkeyActivity.class)};
+    
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

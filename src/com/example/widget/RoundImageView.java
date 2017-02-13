@@ -17,6 +17,7 @@ import android.widget.ImageView;
 
 import com.example.stickyheaderlsitview.R;
 
+//Ô²ÐÎÍ¼Ïñ
 public class RoundImageView extends ImageView {
 	private int mBorderThickness = 0;
 	private Context mContext;

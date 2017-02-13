@@ -5,7 +5,7 @@
 
 android:fitsSystemWindows="true"  
     tools:context="com.example.activity.MainActivity" >
-    <com.example.stickyheaderlsitview.SmoothListView
+    <com.example.listview.SmoothListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

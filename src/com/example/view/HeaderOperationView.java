@@ -16,25 +16,25 @@ import com.example.extra.ImageManager;
 import com.example.stickyheaderlsitview.R;
 
 public class HeaderOperationView {
-	  private List<ImageView> ivList;
-	    private ImageManager mImageManager;
-	    private LayoutInflater mInflate;
-	    Context context;
-	    
-		  public HeaderOperationView(Activity context) {
-			  this.context=context;
-			     mInflate = LayoutInflater.from(context);
-		        ivList = new ArrayList<>();
-		        mImageManager = new ImageManager(context);
-		    }
-		  
-		  
+	private List<ImageView> ivList;
+	private ImageManager mImageManager;
+	private LayoutInflater mInflate;
+	Context context;
 
-		  public void addView(List list ,ListView listView) {
-		        View view = mInflate.inflate(R.layout.header_operation_layout, listView, false);
-		        GridView gvOperation=(GridView) view.findViewById(R.id.gv_operation);
-		        HeaderOperationAdapter adapter = new HeaderOperationAdapter(context, list);
-		        gvOperation.setAdapter(adapter);
-		        listView.addHeaderView(view);
-		    }
+	public HeaderOperationView(Activity context) {
+		this.context = context;
+		mInflate = LayoutInflater.from(context);
+		ivList = new ArrayList<>();
+		mImageManager = new ImageManager(context);
+	}
+
+	public void addView(List list, ListView listView) {
+		View view = mInflate.inflate(R.layout.header_operation_layout,
+				listView, false);
+		GridView gvOperation = (GridView) view.findViewById(R.id.gv_operation);
+		HeaderOperationAdapter adapter = new HeaderOperationAdapter(context,
+				list);
+		gvOperation.setAdapter(adapter);
+		listView.addHeaderView(view);
+	}
 }

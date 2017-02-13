@@ -72,6 +72,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
                 ((SwipeMenuLayout) holder.itemView).quickClose();
                 mDatas.remove(holder.getPosition());
                 notifyDataSetChanged();
+//                notifyItemRemoved(holder.getPosition());
             }
         });
 	}

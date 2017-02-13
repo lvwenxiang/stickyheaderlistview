@@ -37,11 +37,10 @@ public class AddressActivity extends BaseActivity {
 	private List<SortContactbean> SourceDateList;
 	private SuspensionDecoration mDecoration;
 	private TextView show_letter;
-	 private LinearLayoutManager mManager;
-	 private static final String INDEX_STRING_TOP = "↑";
-	 private HeaderRecyclerAndFooterWrapperAdapter mHeaderAdapter;
-	 
-	 
+	private LinearLayoutManager mManager;
+	private static final String INDEX_STRING_TOP = "↑";
+	private HeaderRecyclerAndFooterWrapperAdapter mHeaderAdapter;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -61,7 +60,7 @@ public class AddressActivity extends BaseActivity {
 	}
 
 	private void initData() {
-		mManager=new LinearLayoutManager(AddressActivity.this);
+		mManager = new LinearLayoutManager(AddressActivity.this);
 		mRv.setLayoutManager(mManager);
 		characterParserutil = CharacterParserUtil.getInstance();
 		pinyinComparator = new PinyinComparator();
@@ -78,15 +77,16 @@ public class AddressActivity extends BaseActivity {
 		sidebar.setDatas(SourceDateList).invalidate();
 
 		mAdapter = new AddressAdapter(this, SourceDateList);
-		
-	      mHeaderAdapter = new HeaderRecyclerAndFooterWrapperAdapter(mAdapter) {
-	            @Override
-	            protected void onBindHeaderHolder(ViewHolder holder, int headerPos, int layoutId, Object o) {
-	                holder.setText(R.id.tvCity, (String) o);
-	            }
-	        };
-	        mHeaderAdapter.addHeaderView(R.layout.item_address, "测试头部");
-		
+
+		mHeaderAdapter = new HeaderRecyclerAndFooterWrapperAdapter(mAdapter) {
+			@Override
+			protected void onBindHeaderHolder(ViewHolder holder, int headerPos,
+					int layoutId, Object o) {
+				holder.setText(R.id.tvCity, (String) o);
+			}
+		};
+		mHeaderAdapter.addHeaderView(R.layout.item_address, "测试头部");
+
 		mRv.setAdapter(mAdapter);
 		mRv.setItemAnimator(new DefaultItemAnimator());
 		mRv.addItemDecoration(mDecoration = new SuspensionDecoration(this,
@@ -105,7 +105,7 @@ public class AddressActivity extends BaseActivity {
 				int i = getLetterPosition(s);
 				if (i != -1) {
 					if (android.os.Build.VERSION.SDK_INT >= 8) {
-						//mRv.smoothScrollToPosition(i);
+						// mRv.smoothScrollToPosition(i);
 						mManager.scrollToPositionWithOffset(i, 0);
 					}
 				}
@@ -131,13 +131,13 @@ public class AddressActivity extends BaseActivity {
 		for (int i = 0; i < users.size(); i++) {
 			SortContactbean sortModel = new SortContactbean();
 			sortModel.setCity(users.get(i).getCity());
-			sortModel.setTop(users.get(i).getTop());	
-			if(!users.get(i).getTop()){
+			sortModel.setTop(users.get(i).getTop());
+			if (!users.get(i).getTop()) {
 				// 汉字转换成拼音
 				String pinyin = characterParserutil.getSelling(users.get(i)
 						.getCity());
 				sortModel.setPinyin(pinyin);
-				
+
 				String sortString = pinyin.substring(0, 1).toUpperCase(
 						Locale.getDefault());
 				// 正则表达式，判断首字母是否是英文字母
@@ -147,14 +147,13 @@ public class AddressActivity extends BaseActivity {
 				} else {
 					sortModel.setSortLetters("#");
 				}
-			}
-			else{
-				sortModel.setSortLetters("");	
+			} else {
+				sortModel.setSortLetters("");
 				sortModel.setPinyin("");
 			}
-				
+
 			mSortList.add(sortModel);
-			
+
 		}
 		return mSortList;
 
@@ -168,20 +167,19 @@ public class AddressActivity extends BaseActivity {
 
 		// 微信的头部 也是可以右侧IndexBar导航索引的，
 		// 但是它不需要被ItemDecoration设一个标题titile
-		ContactPersonbean CP1=new ContactPersonbean("新的朋友");
+		ContactPersonbean CP1 = new ContactPersonbean("新的朋友");
 		CP1.setTop(true);
-		ContactPersonbean CP2=new ContactPersonbean("群聊");
+		ContactPersonbean CP2 = new ContactPersonbean("群聊");
 		CP2.setTop(true);
-		ContactPersonbean CP3=new ContactPersonbean("标签");
+		ContactPersonbean CP3 = new ContactPersonbean("标签");
 		CP3.setTop(true);
-		ContactPersonbean CP4=new ContactPersonbean("公众号");
+		ContactPersonbean CP4 = new ContactPersonbean("公众号");
 		CP4.setTop(true);
-		
-		  mDatas.add(CP1); 
-		  mDatas.add(CP2); 
-		  mDatas.add(CP3);
-		  mDatas.add(CP4);
-		 
+
+		mDatas.add(CP1);
+		mDatas.add(CP2);
+		mDatas.add(CP3);
+		mDatas.add(CP4);
 
 		for (int i = 0; i < data.length; i++) {
 			ContactPersonbean contactpersonbean = new ContactPersonbean();

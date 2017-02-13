@@ -17,6 +17,7 @@ import com.example.bean.TravelingEntity;
 import com.example.stickyheaderlsitview.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
+//mainactivity主页中得数据适配
 public class TravelingAdapter extends BaseListAdapter<TravelingEntity> {
 
 	private boolean isNoData;

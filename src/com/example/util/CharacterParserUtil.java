@@ -1,6 +1,6 @@
 package com.example.util;
 
-
+//汉子转拼音工具类
 public class CharacterParserUtil {
 	private static int[] pyvalue = new int[] { -20319, -20317, -20304, -20295,
 		-20292, -20283, -20265, -20257, -20242, -20230, -20051, -20036,

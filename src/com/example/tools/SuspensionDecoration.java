@@ -134,7 +134,7 @@ public class SuspensionDecoration extends RecyclerView.ItemDecoration {
                    c.clipRect(parent.getPaddingLeft(), parent.getPaddingTop(), parent.getRight() - parent.getPaddingRight(), parent.getPaddingTop() + child.getHeight() + child.getTop());
                     //类似饿了么点餐时,商品列表的悬停头部切换“动画效果”
                     //上滑时，将canvas上移 （y为负数） ,所以后面canvas 画出来的Rect和Text都上移了，有种切换的“动画”感觉
-                  //  c.translate(0, child.getHeight() + child.getTop() - mTitleHeight);
+                //    c.translate(0, child.getHeight() + child.getTop() - mTitleHeight);
                   //  MyLog.i("TAG", "onDrawOver===translate");
                    
                 }

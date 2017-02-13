@@ -14,11 +14,12 @@
     <string name="moreactivity_listname1desc">RecyclerView应用、仿微信饿了么</string>
     <string name="moreactivity_listname2">读取联系人</string>
     <string name="moreactivity_listname2desc">联系人</string>
-    <string name="moreactivity_listname3">字体变色效果</string>
+    <string name="moreactivity_listname3">仿今天头条字体变色效果</string>
     <string name="moreactivity_listname3desc">类似今天头条app侧滑字体变色效果</string>
     <string name="moreactivity_listname4">仿饿了么搜索栏</string>
     <string name="moreactivity_listname4desc">y轴动画移动、x轴缩放</string>
     <string name="moreactivity_listname5">仿微信头像截取</string>
     <string name="moreactivity_listname5desc">支持缩放平移的imageview</string>
-
+    <string name="moreactivity_listname6">光钥匙控件总结</string>
+    <string name="moreactivity_listname6desc">光钥匙控件总结</string>
 </resources>

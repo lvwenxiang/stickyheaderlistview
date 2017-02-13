@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
+
+//可放大缩小的imageview
 public class MatrixImageView extends ImageView {
 	public final static String TAG = "MatrixImageView";
 	private GestureDetector mGestureDetector;

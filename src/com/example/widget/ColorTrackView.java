@@ -93,14 +93,7 @@ public class ColorTrackView extends View {
 
 		mTextStartX = getMeasuredWidth() / 2 - mTextWidth / 2;
 		mTextStartY = getMeasuredHeight() / 2 - mTextHeight / 2;
-		MyLog.i("TAG", "getMeasuredWidth========"+getMeasuredWidth());
-		MyLog.i("TAG", "getMeasuredHeight========"+getMeasuredHeight());
-		MyLog.i("TAG", "width========"+width);
-		MyLog.i("TAG", "height========"+height);	
-		MyLog.i("TAG", "mTextWidth========"+mTextWidth);
-		MyLog.i("TAG", "mTextHeight========"+mTextHeight);
-		MyLog.i("TAG", "mTextStartX========"+mTextStartX);
-		MyLog.i("TAG", "mTextStartY========"+mTextStartY);	
+		
 	}
 
 	private int measureHeight(int measureSpec) {
@@ -187,8 +180,7 @@ public class ColorTrackView extends View {
 			canvas.drawRect(startX, 0, endX, getMeasuredHeight(), mPaint);
 		}
 		canvas.save(Canvas.CLIP_SAVE_FLAG);
-		canvas.clipRect(startX, 0, endX, getMeasuredHeight());// left, top,
-																// right, bottom
+		canvas.clipRect(startX, 0, endX, getMeasuredHeight());// left, top,														// right, bottom
 		canvas.drawText(mText, mTextStartX,
 				getMeasuredHeight() / 2
 						- ((mPaint.descent() + mPaint.ascent()) / 2), mPaint);

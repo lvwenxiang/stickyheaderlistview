@@ -1,5 +1,7 @@
 package com.example.bean;
 
+
+//mainActivity 首页展示数据
 public class TravelingEntity {
 	private String type; // 风景、动物、植物、建筑
     private String title; // 标题
