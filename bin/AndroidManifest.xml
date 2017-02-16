@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stickyheaderlsitview"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
+<manifest android:versionCode="1" android:versionName="1.0"
+    package="com.example.stickyheaderlsitview" xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="21"/>
     <application android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -35,8 +32,10 @@
         <activity android:name="com.example.activity.MyRateActivity"/>
         <!--created by ADT ext plugin at 2017-02-07 14:34:48-->
         <activity android:name="com.example.activity.CalenderActivity1"/>
-          <activity android:name="com.example.activity.CalenderActivity2"/>
-        
+        <activity android:name="com.example.activity.CalenderActivity2"/>
+        <!--created by ADT ext plugin at 2017-02-13 14:32:22-->
+        <activity android:name="com.example.activity.GestureSetAndVerifyActivity"/>
+        <activity android:name="com.example.activity.GestureActivity"/>
         
     </application>
     <!--  短信相关权限 -->

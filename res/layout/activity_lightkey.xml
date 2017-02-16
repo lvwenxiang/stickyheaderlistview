@@ -36,4 +36,12 @@
         android:layout_marginTop="30dip"
         android:text="弹出框日历" />
 
+    
+        <Button
+        android:id="@+id/gesturepassword"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dip"
+        android:text="手势密码" />
 </LinearLayout>

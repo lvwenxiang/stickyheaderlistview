@@ -13,6 +13,8 @@ public class LightkeyActivity extends Activity {
 	private Button btn_k2;
 	private Button btn_k3;
 	private Button btn_k4;
+	private Button btn_k5;
+//	gesturepassword
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,6 +23,7 @@ public class LightkeyActivity extends Activity {
 		btn_k2 = (Button) findViewById(R.id.kaoqin2);
 		btn_k3 = (Button) findViewById(R.id.kaoqinrili1);
 		btn_k4 = (Button) findViewById(R.id.kaoqinrili2);
+		btn_k5 = (Button) findViewById(R.id.gesturepassword);
 		btn_k.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -51,6 +54,14 @@ public class LightkeyActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				startActivity(new Intent(LightkeyActivity.this, CalenderActivity2.class)
+				.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
+				overridePendingTransition(0, 0);
+			}
+		});
+		btn_k5.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(LightkeyActivity.this, GestureActivity.class)
 				.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
 				overridePendingTransition(0, 0);
 			}
