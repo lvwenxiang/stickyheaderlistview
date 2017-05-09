@@ -69,6 +69,9 @@ public class HeaderAdViewView {
 		vpAd = (ViewPager) view.findViewById(R.id.vp_ad);
 		llIndexContainer = (LinearLayout) view
 				.findViewById(R.id.ll_index_container);
+		
+		
+		//显示以屏幕多个页面
 		// 设置Page间间距
 		vpAd.setPageMargin(20);
 		// 设置缓存的页面数量

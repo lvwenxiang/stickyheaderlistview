@@ -180,7 +180,7 @@ public class ColorTrackView extends View {
 			canvas.drawRect(startX, 0, endX, getMeasuredHeight(), mPaint);
 		}
 		canvas.save(Canvas.CLIP_SAVE_FLAG);
-		canvas.clipRect(startX, 0, endX, getMeasuredHeight());// left, top,														// right, bottom
+		canvas.clipRect(startX, 0, endX, getMeasuredHeight());// left, top,	// right, bottom
 		canvas.drawText(mText, mTextStartX,
 				getMeasuredHeight() / 2
 						- ((mPaint.descent() + mPaint.ascent()) / 2), mPaint);

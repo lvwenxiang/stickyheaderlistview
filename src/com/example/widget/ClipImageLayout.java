@@ -38,7 +38,7 @@ public class ClipImageLayout extends RelativeLayout{
 				R.drawable.ba));
 		
 		this.addView(mZoomImageView, lp);
-	//	this.addView(matriximageview, lp);
+//		this.addView(matriximageview, lp);
 		this.addView(mClipImageView, lp);
 		
 		

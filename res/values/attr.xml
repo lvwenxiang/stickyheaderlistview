@@ -27,4 +27,16 @@
         <attr name="border_inside_color" format="color" />
         <attr name="border_outside_color" format="color"></attr>
     </declare-styleable>
+    
+    
+       <declare-styleable name="WaterMarkView">
+        <attr name="degree" format="dimension" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="waterText" format="reference|string" />
+        <attr name="waterTextsize" format="dimension" />
+        <attr name="viewalpha" format="reference|string" />
+        <attr name="Xinterval" format="dimension" />
+        <attr name="Yinterval" format="dimension" />
+    </declare-styleable>
+    
 </resources>

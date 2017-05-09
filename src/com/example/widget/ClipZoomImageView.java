@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
@@ -22,8 +23,6 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
-
-import com.example.extra.MyLog;
 
 public class ClipZoomImageView extends ImageView implements
 		OnScaleGestureListener, OnTouchListener,
@@ -362,12 +361,12 @@ public class ClipZoomImageView extends ImageView implements
 			mScaleMatrix.postScale(scale, scale, getWidth() / 2,
 					getHeight() / 2);
 			
-			MyLog.e("TAG", "getWidth===="+getWidth());
-			MyLog.e("TAG", "getHeight===="+getHeight());
-			
-			MyLog.e("TAG", "scale===="+scale);
-			MyLog.e("TAG", "dw===="+dw);
-			MyLog.e("TAG", "dh===="+dh);
+//			MyLog.e("TAG", "getWidth===="+getWidth());
+//			MyLog.e("TAG", "getHeight===="+getHeight());
+//			
+//			MyLog.e("TAG", "scale===="+scale);
+//			MyLog.e("TAG", "dw===="+dw);
+//			MyLog.e("TAG", "dh===="+dh);
 			// 图片移动至屏幕中心
 			setImageMatrix(mScaleMatrix);
 			once = false;
@@ -381,6 +380,8 @@ public class ClipZoomImageView extends ImageView implements
 	 * @return
 	 */
 	public Bitmap clip() {
+		
+//		
 		Bitmap bitmap = Bitmap.createBitmap(getWidth(), getHeight(),
 				Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
@@ -388,6 +389,8 @@ public class ClipZoomImageView extends ImageView implements
 		return Bitmap.createBitmap(bitmap, mHorizontalPadding,
 				mVerticalPadding, getWidth() - 2 * mHorizontalPadding,
 				getWidth() - 2 * mHorizontalPadding);
+		
+//		返回圆形bitmap
 //		return getCircleBitmap(Bitmap.createBitmap(bitmap, mHorizontalPadding,
 //				mVerticalPadding, getWidth() - 2 * mHorizontalPadding,
 //				getWidth() - 2 * mHorizontalPadding));
@@ -400,12 +403,15 @@ public class ClipZoomImageView extends ImageView implements
     private Bitmap getCircleBitmap(Bitmap bitmap) {    
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),bitmap.getHeight(), Config.ARGB_8888);    
         Canvas canvas = new Canvas(output);   
+        canvas.drawColor(Color.TRANSPARENT);
+    
         final int color = 0xff424242;   
         final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());    
         Paint paint =new Paint();  
         paint.setAntiAlias(true);    
-        canvas.drawARGB(0, 0, 0, 0);    
-        paint.setColor(color);   
+//        canvas.drawARGB(0, 0, 0, 0);    
+//        paint.setColor(color); 
+        paint.setColor(Color.WHITE);
         int x = bitmap.getWidth();   
         canvas.drawCircle(x / 2, x / 2, x / 2, paint);    
         paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));    

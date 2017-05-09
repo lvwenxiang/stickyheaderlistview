@@ -44,4 +44,14 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dip"
         android:text="手势密码" />
+        
+        
+        
+               <Button
+        android:id="@+id/chatbtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dip"
+        android:text="聊天室" />
 </LinearLayout>

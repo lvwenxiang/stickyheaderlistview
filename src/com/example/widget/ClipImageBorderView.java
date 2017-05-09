@@ -1,10 +1,14 @@
 package com.example.widget;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -54,66 +58,64 @@ public class ClipImageBorderView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		 super.onDraw(canvas);
-		// 方形剪切		
-		 // 计算矩形区域的宽度
-		 mWidth = getWidth() - 2 * mHorizontalPadding;
-		 // 计算距离屏幕垂直边界 的边距
-		 mVerticalPadding = (getHeight() - mWidth) / 2;
-		 mPaint.setColor(Color.parseColor("#aa000000"));
-		 mPaint.setStyle(Style.FILL);
-		 // 绘制左边1
-		 canvas.drawRect(0, 0, mHorizontalPadding, getHeight(), mPaint);
-		 // 绘制右边2
-		 canvas.drawRect(getWidth() - mHorizontalPadding, 0, getWidth(),
-		 getHeight(), mPaint);
-		 // 绘制上边3
-		 canvas.drawRect(mHorizontalPadding, 0, getWidth() -
-		 mHorizontalPadding,
-		 mVerticalPadding, mPaint);
-		 // 绘制下边4
-		 canvas.drawRect(mHorizontalPadding, getHeight() - mVerticalPadding,
-		 getWidth() - mHorizontalPadding, getHeight(), mPaint);
-		 // 绘制外边框
-		 mPaint.setColor(mBorderColor);
-		 mPaint.setStrokeWidth(mBorderWidth);
-		 mPaint.setStyle(Style.STROKE);
-		  canvas.drawRect(mHorizontalPadding, mVerticalPadding, getWidth()
-		 - mHorizontalPadding, getHeight() - mVerticalPadding, mPaint);
+//		// 方形剪切		
+//		 // 计算矩形区域的宽度
+//		 mWidth = getWidth() - 2 * mHorizontalPadding;
+//		 // 计算距离屏幕垂直边界 的边距
+//		 mVerticalPadding = (getHeight() - mWidth) / 2;
+//		 mPaint.setColor(Color.parseColor("#aa000000"));
+//		 mPaint.setStyle(Style.FILL);
+//		 // 绘制左边1
+//		 canvas.drawRect(0, 0, mHorizontalPadding, getHeight(), mPaint);
+//		 // 绘制右边2
+//		 canvas.drawRect(getWidth() - mHorizontalPadding, 0, getWidth(),
+//		 getHeight(), mPaint);
+//		 // 绘制上边3
+//		 canvas.drawRect(mHorizontalPadding, 0, getWidth() -
+//		 mHorizontalPadding,
+//		 mVerticalPadding, mPaint);
+//		 // 绘制下边4
+//		 canvas.drawRect(mHorizontalPadding, getHeight() - mVerticalPadding,
+//		 getWidth() - mHorizontalPadding, getHeight(), mPaint);
+//		 // 绘制外边框
+//		 mPaint.setColor(mBorderColor);
+//		 mPaint.setStrokeWidth(mBorderWidth);
+//		 mPaint.setStyle(Style.STROKE);
+//		  canvas.drawRect(mHorizontalPadding, mVerticalPadding, getWidth()
+//		 - mHorizontalPadding, getHeight() - mVerticalPadding, mPaint);
 
-		
 //仿微博 圆形剪切		
-//			super.onDraw(canvas);
-//		Paint mPaintCirle = new Paint();
-//		Paint mPaintRect = new Paint();
-//		Bitmap mBgBitmap = null;
-//		Canvas mCanvas = null;
-//		RectF mRect = null;
-//		Paint mPaintCirle2 = new Paint();	
-//		mPaintCirle.setXfermode(new PorterDuffXfermode(Mode.XOR));
-//		mPaintRect.setColor(Color.parseColor("#aa000000"));
-//		mPaintRect.setStyle(Style.FILL);
-//		// 绘制外边框
-//		mPaint.setColor(mBorderColor);
-//		mPaint.setStrokeWidth(mBorderWidth);
-//		mPaint.setStyle(Style.STROKE);
-//		if (mBgBitmap == null) {
-//			mBgBitmap = Bitmap.createBitmap(getWidth(), getHeight(),
-//					Bitmap.Config.ARGB_8888);
-//			mCanvas = new Canvas(mBgBitmap);
-//			mRect = new RectF(0, 0, getWidth(), getHeight());
-//		}
-//		// 绘制阴影层
-//		mCanvas.drawRect(mRect, mPaintRect);
-//
+
+		Paint mPaintCirle = new Paint();
+		Paint mPaintRect = new Paint();
+		Bitmap mBgBitmap = null;
+		Canvas mCanvas = null;
+		RectF mRect = null;
+		mPaintCirle.setXfermode(new PorterDuffXfermode(Mode.XOR));
+		mPaintRect.setColor(Color.parseColor("#aa000000"));
+		mPaintRect.setStyle(Style.FILL);
+		// 绘制外边框
+		mPaint.setColor(mBorderColor);
+		mPaint.setStrokeWidth(mBorderWidth);
+		mPaint.setStyle(Style.STROKE);
+		if (mBgBitmap == null) {
+			mBgBitmap = Bitmap.createBitmap(getWidth(), getHeight(),
+					Bitmap.Config.ARGB_8888);
+				mCanvas = new Canvas(mBgBitmap);
+			mRect = new RectF(0, 0, getWidth(), getHeight());
+		}
+		// 绘制阴影层
+		mCanvas.drawRect(mRect, mPaintRect);
+
 ////		 绘制实心圆 ，绘制完后，在mCanvas画布中，mPaintRect和mPaintCirle相交部分即被掏空
-//		mCanvas.drawCircle(getWidth() / 2, getHeight() / 2,
-//				getWidth() / 2 - mHorizontalPadding, mPaintCirle);
-//		// 将阴影层画进本View的画布中
-//		canvas.drawBitmap(mBgBitmap, null, mRect, new Paint());
+		mCanvas.drawCircle(getWidth() / 2, getHeight() / 2,
+				getWidth() / 2 - mHorizontalPadding, mPaintCirle);
+		// 将阴影层画进本View的画布中
+		canvas.drawBitmap(mBgBitmap, null, mRect, new Paint());
 ////		// 绘制圆环
-//		canvas.drawCircle(getWidth() / 2, getHeight() / 2,
-//				getWidth() / 2 - mHorizontalPadding, mPaint);
-//		
+		canvas.drawCircle(getWidth() / 2, getHeight() / 2,
+				getWidth() / 2 - mHorizontalPadding, mPaint);
+		
 		
 		
 

@@ -17,12 +17,12 @@ public class ShowClipHeadActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.showcliphead_activity);
 
-//		mImageView = (ImageView) findViewById(R.id.id_showImage);
-		mImageView2 = (RoundImageView) findViewById(R.id.id_showImage);
+		mImageView = (ImageView) findViewById(R.id.id_showImage);
+//		mImageView2 = (RoundImageView) findViewById(R.id.id_showImage);
 		byte[] b = getIntent().getByteArrayExtra("bitmap");
 		Bitmap bitmap = BitmapFactory.decodeByteArray(b, 0, b.length);
 		if (bitmap != null) {
-			mImageView2.setImageBitmap(bitmap);
+			mImageView.setImageBitmap(bitmap);
 		}
 	}
 }

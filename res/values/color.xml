@@ -3,9 +3,8 @@
    <color name="colorPrimary">#f27242</color>
     <color name="colorPrimaryDark">#f27242</color>
     <color name="colorAccent">#f27242</color>
-
+   <color name="white">#FFFFFF</color> 
     <!-- common -->
-    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="half_transparent">#8f000000</color>

@@ -73,8 +73,6 @@ public class SmoothListView extends ListView implements OnScrollListener {
 
 	private void initWithContext(Context context) {
 		mScroller = new Scroller(context, new DecelerateInterpolator());
-		// XListView need the scroll event, and it will dispatch the event to
-		// user's listener (as a proxy).
 		super.setOnScrollListener(this);
 
 		// init header view
@@ -345,7 +343,6 @@ public class SmoothListView extends ListView implements OnScrollListener {
 	 */
 	public interface ISmoothListViewListener {
 		void onRefresh();
-
 		void onLoadMore();
 	}
 }

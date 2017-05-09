@@ -331,9 +331,13 @@ public class DateViewN extends LinearLayout {
 				calendar.set(Calendar.YEAR, mShowDate.year);
 				calendar.set(Calendar.MONTH, mShowDate.month - 1);
 				calendar.set(Calendar.DAY_OF_MONTH, mShowDate.day);
+				//设置当月第一天      
 				calendar.set(Calendar.DAY_OF_MONTH, 1);
+				//然后获取当月读一天是礼拜几
 				int dayInWeek = calendar.get(Calendar.DAY_OF_WEEK);
+				//设置为上个月时间
 				calendar.set(Calendar.DAY_OF_MONTH, 0);
+				//获取上个月的天数
 				int dayInmonth = calendar.get(Calendar.DAY_OF_MONTH);
 				mCalendarCells.get(i).setData(calendar.get(Calendar.YEAR),
 						calendar.get(Calendar.MONTH) + 1,

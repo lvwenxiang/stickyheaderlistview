@@ -7,6 +7,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AbsListView;
@@ -132,7 +135,7 @@ public class MainActivity extends BaseActivity implements
 	public void initListiner() {
 		filterViewPosition = smoothListView.getHeaderViewsCount() - 1;
 		smoothListView.setRefreshEnable(true);
-		smoothListView.setLoadMoreEnable(true);
+		smoothListView.setLoadMoreEnable(false);
 		smoothListView.setSmoothListViewListener(this);
 		smoothListView
 				.setOnScrollListener(new SmoothListView.OnSmoothScrollListener() {
@@ -243,9 +246,16 @@ public class MainActivity extends BaseActivity implements
 
 	@Override
 	public void onRefresh() {
-		smoothListView.stopRefresh();
+		
+		new Handler().postDelayed(new Runnable() {
 
+			@Override
+			public void run() {
+				smoothListView.stopRefresh();
+			}
+		}, 5000);
 	}
+	
 	@Override
 	public void onLoadMore() {
 
